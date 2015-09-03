@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 
 
-class HomeController extends Controller {
+class UserController extends Controller {
 	/*
 	|--------------------------------------------------------------------------
 	| Default Home Controller
@@ -19,11 +19,20 @@ class HomeController extends Controller {
 	|
 	*/
 
-	public function showHomepage() {
-		return View('home/index');
+	public function login() {
+		return View('user/login');
 	}
 
-	public function myAccount() {
-		return View('home/account');
+	public function doLogin() {
+	}
+
+	public function logout() {
+	}
+
+	public function register() {
+		return View('user/register');
+	}
+
+	public function doRegister() {
 	}
 }

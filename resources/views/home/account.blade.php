@@ -2,6 +2,6 @@
 
 @section('content')
 	<div class="starter-template">
-    	Home - Index Page
+    	Home - Account Page
     </div>
 @stop

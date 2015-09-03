@@ -12,3 +12,15 @@
 */
 
 Route::get('/', 'HomeController@showHomepage');
+Route::get('/account', 'HomeController@myAccount'); 
+
+
+Route::get('/login', 'UserController@login');
+Route::post('/login', 'UserController@doLogin');
+
+Route::get('/register', 'UserController@register');
+Route::post('/register', 'UserController@doRegister');
+
+Route::get('/logout', 'UserController@logout');
+
+
