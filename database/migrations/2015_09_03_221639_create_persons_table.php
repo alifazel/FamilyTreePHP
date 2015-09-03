@@ -22,8 +22,11 @@ class CreatePersonsTable extends Migration
             $table->char('gender', 1);
             $table->date('dob');
             $table->date('dod');
-            $table->string('description', 255);
+            $table->integer('marriage_id');
+            $table->text('description');
+        });
     }
+
 
     /**
      * Reverse the migrations.

@@ -20,7 +20,9 @@ class CreateImagesTable extends Migration
             $table->string('url_thumb');
             $table->text('description');
             $table->date('date_taken');
+        });
     }
+
 
     /**
      * Reverse the migrations.
