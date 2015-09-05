@@ -17,8 +17,8 @@ class CreateImagesTable extends Migration
             $table->increments('id');
             $table->string('url');
             $table->string('url_thumb');
-            $table->text('description');
-            $table->date('date_taken');
+            $table->text('description')->nullable();
+            $table->date('date_taken')->nullable();
         });
     }
 

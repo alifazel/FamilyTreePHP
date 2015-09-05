@@ -17,13 +17,13 @@ class CreatePersonsTable extends Migration
             $table->increments('id');
             $table->string('first_name', 255);
             $table->string('last_name', 255);
-            $table->integer('father_id');
-            $table->integer('mother_id');
+            $table->integer('father_id')->nullable();
+            $table->integer('mother_id')->nullable();
             $table->char('gender', 1);
             $table->date('dob');
-            $table->date('dod');
-            $table->integer('marriage_id');
-            $table->text('description');
+            $table->date('dod')->nullable();
+            $table->integer('marriage_id')->nullable();
+            $table->text('description')->nullable();
         });
     }
 
