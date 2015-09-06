@@ -17,8 +17,10 @@ class CreatePersonsTable extends Migration
             $table->increments('id');
             $table->string('first_name', 255);
             $table->string('last_name', 255);
-            $table->integer('father_id')->nullable();
-            $table->integer('mother_id')->nullable();
+            $table->integer('father_id')->unsigned()->nullable();
+            $table->foreign('father_id')->references('id')->on('persons');
+            $table->integer('mother_id')->unsigned()->nullable();
+            $table->foreign('mother_id')->references('id')->on('persons');
             $table->integer('profile_picture_id')->nullable();
             $table->char('gender', 1);
             $table->date('dob');
