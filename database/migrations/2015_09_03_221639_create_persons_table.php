@@ -19,10 +19,11 @@ class CreatePersonsTable extends Migration
             $table->string('last_name', 255);
             $table->integer('father_id')->nullable();
             $table->integer('mother_id')->nullable();
+            $table->integer('profile_picture_id')->nullable();
             $table->char('gender', 1);
             $table->date('dob');
             $table->date('dod')->nullable();
-            $table->integer('marriage_id')->nullable();
+            $table->string('marriage_id', 10)->nullable();
             $table->text('description')->nullable();
         });
     }
