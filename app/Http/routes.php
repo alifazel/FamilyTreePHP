@@ -14,13 +14,11 @@
 Route::get('/', 'HomeController@showHomepage');
 Route::get('/account', 'HomeController@myAccount'); 
 
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-Route::get('/login', 'UserController@login');
-Route::post('/login', 'UserController@doLogin');
-
-Route::get('/register', 'UserController@register');
-Route::post('/register', 'UserController@doRegister');
-
-Route::get('/logout', 'UserController@logout');
-
-
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-
+use Auth;
+use App\Person;
 
 class HomeController extends Controller {
 	/*
@@ -24,6 +25,9 @@ class HomeController extends Controller {
 	}
 
 	public function myAccount() {
-		return View('home/account');
+		$user = Auth::user();
+		$person = Person::find($user->person_id);
+		
+		return View('home/account', ['name' => $person->first_name]);
 	}
 }

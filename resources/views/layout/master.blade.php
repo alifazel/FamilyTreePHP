@@ -11,10 +11,10 @@
 		<title>FamilyTree - PHP powered Family Tree</title>
 
 	 <!-- Bootstrap Core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
 		<!-- Custom CSS -->
-		<link href="css/custom.css" rel="stylesheet">
+		<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>

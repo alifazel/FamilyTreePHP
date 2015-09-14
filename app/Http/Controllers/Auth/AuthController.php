@@ -22,12 +22,18 @@ class AuthController extends Controller
     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    
+    /* User Defined Changes */
+    protected $username = 'username';
+    protected $redirectPath = '/account';
 
     /**
      * Create a new authentication controller instance.
      *
      * @return void
      */
+
+
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
